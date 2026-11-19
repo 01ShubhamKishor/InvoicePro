@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@media print {
+
+    header,
+    nav,
+    aside {
+        display: none !important;
+    }
+
+    body {
+        background: white !important;
+    }
+
+    main {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+}

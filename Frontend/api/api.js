@@ -1,6 +1,8 @@
 import axios from "axios";
-export const API = axios.create({ baseURL: "http://127.0.0.1:8000" });
 
+export const API = axios.create({ 
+  baseURL: import.meta.env.VITE_API_URL || "https://invoicepro-13lj.onrender.com" 
+});
 
 API.interceptors.request.use((config) => {
   const token = localStorage.getItem("token");
